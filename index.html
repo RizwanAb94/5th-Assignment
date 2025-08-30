@@ -8,6 +8,7 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    
     tailwind.config = {
       theme: {
         extend: {
@@ -29,11 +30,12 @@
       }
     }
   </script>
+  <script src="https://kit.fontawesome.com/409a1344d1.js" crossorigin="anonymous"></script>
   <style>.badge-chip{font-size:11px}</style>
 </head>
 <body class="bg-[#f2fbf6] text-slate-800">
 
-  <!-- NAVBAR -->
+  <!-- Navber -->
   <header class="w-full bg-white shadow-sm">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <div class="flex items-center gap-3">
@@ -59,3 +61,98 @@
       </div>
     </div>
   </header>
+   <!-- Hero -->
+  <section class="w-full bg-gradient-to-r from-brand-900 via-brand-800 to-brand-600">
+    <div class="max-w-6xl mx-auto px-4 py-8 sm:py-10 md:py-12 text-center text-white">
+      <div class="w-16 h-16 mx-auto mb-3 rounded-full grid place-items-center ring-2 ring-white/40 bg-white/5">
+        <img src="assets/logo-dark.png" alt="" class="w-14 h-14 object-contain"/>
+      </div>
+      <h1 class="text-white font-extrabold text-[26px] sm:text-[28px] md:text-[30px] tracking-tight">জরুরি সেবা ডিরেক্টরি</h1>
+      <p class="mt-2 text-[12.5px] sm:text-sm opacity-90">
+        Government Emergency Services at Your Fingertip – A Project by
+        Government of the People’s Republic of Bangladesh
+      </p>
+    </div>
+  </section>
+   <!-- Main section -->
+  <main class="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 py-6">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-5">
+      <section class="lg:col-span-3 grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+       <!-- 1 -->
+        <article class="bg-white rounded-xl2 shadow-card p-4 relative">
+          <button class="absolute right-3 top-3 text-slate-400 hover:text-green-500 heartBtn" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-rose-50 grid place-items-center">
+              <img src="assets/emergency.png" alt="Emergency" class="w-7 h-7 object-contain"/>
+            </div>
+            <div>
+              <h3 class="font-bold">জাতীয় জরুরি সেবা</h3>
+              <p class="text-xs text-slate-500">National Emergency</p>
+            </div>
+          </div>
+          <p class="text-2xl font-extrabold mt-3">999</p>
+          <span class="inline-block mt-1 bg-slate-100 text-slate-600 rounded-md px-2 py-1 badge-chip">সার্বজনীন</span>
+          <div class="mt-4 flex items-center gap-2">
+            <button class="copyBtn flex-1 bg-slate-50 hover:bg-slate-100 border rounded-lg px-3 py-2 text-sm" data-number="999"> Copy</button>
+            <button class="callBtn flex-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-3 py-2 text-sm" data-name="জাতীয় জরুরি সেবা" data-number="999"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </article>
+  <!-- 2  -->
+        <article class="bg-white rounded-xl2 shadow-card p-4 relative">
+          <button class="absolute right-3 top-3 text-slate-400 hover:text-green-500 heartBtn"><i class="fa-regular fa-heart"></i></button>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-blue-50 grid place-items-center">
+              <img src="assets/police.png" alt="Police" class="w-7 h-7 object-contain"/>
+            </div>
+            <div>
+              <h3 class="font-bold">পুলিশ</h3>
+              <p class="text-xs text-slate-500">Police</p>
+            </div>
+          </div>
+          <p class="text-2xl font-extrabold mt-3">999</p>
+          <span class="inline-block mt-1 bg-blue-50 text-slate-600 rounded-md px-2 py-1 badge-chip">পুলিশ</span>
+          <div class="mt-4 flex gap-2">
+            <button class="copyBtn flex-1 bg-slate-50 hover:bg-slate-100 border rounded-lg px-3 py-2 text-sm" data-number="999"> Copy</button>
+            <button class="callBtn flex-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-3 py-2 text-sm" data-name="পুলিশ" data-number="999"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </article>
+
+        <!-- 3  -->
+        <article class="bg-white rounded-xl2 shadow-card p-4 relative">
+          <button class="absolute right-3 top-3 text-slate-400 hover:text-green-500 heartBtn"><i class="fa-regular fa-heart"></i></button>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-red-50 grid place-items-center">
+              <img src="assets/fire-service.png" alt="Fire Service" class="w-7 h-7 object-contain"/>
+            </div>
+            <div>
+              <h3 class="font-bold">ফায়ার সার্ভিস</h3>
+              <p class="text-xs text-slate-500">Fire Service</p>
+            </div>
+          </div>
+          <p class="text-2xl font-extrabold mt-3">999</p>
+          <span class="inline-block mt-1 bg-red-50 text-slate-600 rounded-md px-2 py-1 badge-chip">ফায়ার</span>
+          <div class="mt-4 flex gap-2">
+            <button class="copyBtn flex-1 bg-slate-50 hover:bg-slate-100 border rounded-lg px-3 py-2 text-sm" data-number="999"> Copy</button>
+            <button class="callBtn flex-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-3 py-2 text-sm" data-name="ফায়ার সার্ভিস" data-number="999"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </article>
+
+        <!-- 4  -->
+        <article class="bg-white rounded-xl2 shadow-card p-4 relative">
+          <button class="absolute right-3 top-3 text-slate-400 hover:text-green-500 heartBtn"><i class="fa-regular fa-heart"></i></button>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-emerald-50 grid place-items-center">
+              <img src="assets/ambulance.png" alt="Ambulance" class="w-7 h-7 object-contain"/>
+            </div>
+            <div>
+              <h3 class="font-bold">অ্যাম্বুলেন্স</h3>
+              <p class="text-xs text-slate-500">Ambulance</p>
+            </div>
+          </div>
+          <p class="text-2xl font-extrabold mt-3 tracking-tight">1994-999999</p>
+          <span class="inline-block mt-1 bg-emerald-50 text-slate-600 rounded-md px-2 py-1 badge-chip">স্বাস্থ্য</span>
+          <div class="mt-4 flex gap-2">
+            <button class="copyBtn flex-1 bg-slate-50 hover:bg-slate-100 border rounded-lg px-3 py-2 text-sm" data-number="1994-999999"> Copy</button>
+            <button class="callBtn flex-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-3 py-2 text-sm" data-name="অ্যাম্বুলেন্স" data-number="1994-999999"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </article>
