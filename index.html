@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emergency Service</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              900: "#0d5e4a",
+              800: "#0f6b50",
+              700: "#11785a",
+              600: "#118a63"
+            }
+          },
+          boxShadow: {
+            card: "0 6px 18px rgba(16,24,40,0.06)"
+          },
+          borderRadius: {
+            xl2: "16px"
+          }
+        }
+      }
+    }
+  </script>
+  <style>.badge-chip{font-size:11px}</style>
+</head>
+<body class="bg-[#f2fbf6] text-slate-800">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Gov logo" class="w-9 h-9 rounded-full object-contain"/>
+        <div class="leading-5">
+          <p class="font-extrabold text-[18px] text-[#0b7a57]">Emergency</p>
+          <p class="font-extrabold text-[18px] text-[#0b7a57] -mt-1">Service</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 sm:gap-4">
+        <div class="flex items-center gap-2 bg-[#effcf4] px-3 py-1.5 rounded-full">
+          <span id="heartCount" class="font-semibold">0</span>
+         <img src="assets/heart.png" alt="coin" class="w-5 h-5"/>
+        <div class="flex items-center gap-2 bg-[#effcf4] px-3 py-1.5 rounded-full">
+          <span id="coinCount" class="font-semibold">100</span>
+          <img src="assets/coin.png" alt="coin" class="w-5 h-5"/>
+        </div>
+        <div class="flex items-center gap-2 bg-[#0ea76b] text-white px-3 py-1.5 rounded-full">
+          <span id="copyCount" class="font-semibold">0</span>
+          <span>Copy</span>
+        </div>
+      </div>
+    </div>
+  </header>
