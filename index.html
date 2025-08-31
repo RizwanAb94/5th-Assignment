@@ -198,3 +198,51 @@
           </div>
         </article>
       </section>
+      <!-- Call History -->
+        <aside class="bg-white rounded-xl2 shadow-card p-4 h-fit">
+        <div class="flex items-center justify-between mb-3">
+          <h4 class="font-bold flex items-center gap-2"><span><i class="fa-regular fa-clock"></i></span> Call History</h4>
+          <button id="clearHistory" class="px-3 py-1.5 text-sm rounded-lg bg-emerald-50 text-emerald-700 hover:bg-green-200">Clear</button>
+        </div>
+        <ul id="historyList" class="space-y-2 text-[13px] text-slate-700"></ul>
+      </aside>
+    </div>
+  </main>
+       <!-- js -->
+  <script>
+    let heartCount = 0;
+    let coinCount = 100;
+    let copyCount = 0;
+
+    const heartEl = document.getElementById("heartCount");
+    const coinEl  = document.getElementById("coinCount");
+    const copyEl  = document.getElementById("copyCount");
+    const historyList = document.getElementById("historyList");
+
+    // heart
+    document.querySelectorAll(".heartBtn").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        heartCount++;
+        heartEl.textContent = heartCount;
+         btn.innerHTML =` <i class="fa-regular fa-heart"></i>`;
+        setTimeout(()=>{ btn.innerHTML=`<i class="fa-regular fa-heart"></i>`},250);
+      });
+    });
+ //  copy
+    async function doCopy(number){
+      try{
+        await navigator.clipboard.writeText(number);
+      }catch(e){
+        const ta = document.createElement("textarea");
+        ta.value = number;
+        document.body.appendChild(ta);
+        ta.select(); document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+      copyCount++; copyEl.textContent = copyCount;
+      alert("Copied: " + number);
+    }
+    document.querySelectorAll(".copyBtn").forEach(btn=>{
+      btn.addEventListener("click", ()=> doCopy(btn.dataset.number));
+    });
+   </script>
