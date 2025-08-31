@@ -245,4 +245,37 @@
     document.querySelectorAll(".copyBtn").forEach(btn=>{
       btn.addEventListener("click", ()=> doCopy(btn.dataset.number));
     });
-   </script>
+     // local time
+    function localTime(){
+      const d = new Date();
+      return d.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit", second:"2-digit"});
+    }
+
+    // call
+    document.querySelectorAll(".callBtn").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const name = btn.dataset.name, number = btn.dataset.number;
+
+        if(coinCount < 20){
+          alert("দুঃখিত! পর্যাপ্ত কয়েন নেই .");
+          return;
+        }
+        coinCount -= 20; coinEl.textContent = coinCount;
+
+        alert(`Calling ${name} (${number})`);
+        const li = document.createElement("li");
+        li.className = "flex items-center justify-between bg-slate-50 rounded-lg px-3 py-2";
+        li.innerHTML = `<span class="truncate">${name} — <span class="font-semibold">${number}</span></span>
+                        <span class="text-slate-500">${localTime()}</span>`;
+        historyList.prepend(li);
+      });
+    });
+
+    // 🧹 clear
+    document.getElementById("clearHistory").addEventListener("click", ()=>{
+      historyList.innerHTML = "";
+    });
+  </script>
+</body>
+</html>
+   
